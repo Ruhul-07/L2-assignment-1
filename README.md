@@ -58,3 +58,26 @@ function printId(id: number | string) {
 
 printId(101);        // ✅ Valid
 printId("XYZ123");   // ✅ Valid
+
+
+### 🔹 Intersection Type Example
+
+type Person = {
+  name: string;
+  age: number;
+};
+
+type Employee = {
+  employeeId: number;
+  department: string;
+};
+
+type Staff = Person & Employee;
+
+const staffMember: Staff = {
+  name: "Rafiq",
+  age: 28,
+  employeeId: 4567,
+  department: "Engineering",
+};
+
